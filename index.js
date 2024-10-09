@@ -1280,13 +1280,12 @@ function getConfig(userIDs, hostName) {
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
-  `;
-
+  
 	const header = `
     <div class="container">
       <h1>BEDEBAH: Protocol Configuration</h1>
-      <p>Welcome! This function generates configuration for the vless protocol. If you found this useful, please check our GitHub project:</p>
-      <p><a href="https://github.com/tedjo877/bedebah" target="_blank" style="color: #00ff00;">EDtunnel - https://github.com/tedjo877/bedebah</a></p>
+      
+      <p><a href="https://github.com/tedjo877/bedebah" target="_blank" style="color: #00ff00;">BEDEBAH - https://github.com/tedjo877/bedebah</a></p>
       <div style="clear: both;"></div>
       <div class="btn-group">
         <a href="//${hostName}/sub/${userIDArray[0]}" class="btn" target="_blank"><i class="fas fa-link"></i> VLESS Subscription</a>
@@ -1294,18 +1293,6 @@ function getConfig(userIDs, hostName) {
         <a href="${clash_link}" class="btn" target="_blank"><i class="fas fa-bolt"></i> Clash Link</a>
         <a href="${subbestip}" class="btn" target="_blank"><i class="fas fa-star"></i> Best IP Subscription</a>
       </div>
-      <div class="subscription-info">
-        <h3>Options Explained:</h3>
-        <ul>
-          <li><strong>VLESS Subscription:</strong> Direct link for VLESS protocol configuration. Suitable for clients supporting VLESS.</li>
-          <li><strong>Clash Subscription:</strong> Opens the Clash client with pre-configured settings. Best for Clash users on mobile devices.</li>
-          <li><strong>Clash Link:</strong> A web link to convert the VLESS config to Clash format. Useful for manual import or troubleshooting.</li>
-          <li><strong>Best IP Subscription:</strong> Provides a curated list of optimal server IPs for many <b>different countries</b>.</li>
-        </ul>
-        <p>Choose the option that best fits your client and needs. For most users, the VLESS or Clash Subscription will be the easiest to use.</p>
-      </div>
-    </div>
-  `;
 
 	const configOutput = userIDArray.map((userID) => {
 		const protocolMain = atob(pt) + '://' + userID + atob(at) + hostName + ":443" + commonUrlPart;
